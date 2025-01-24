@@ -86,6 +86,10 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = (array[i] == 0) ? 1 : 0;
         }
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 
     // Задание 11
@@ -94,6 +98,10 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
         return array;
     }
 
@@ -104,6 +112,10 @@ public class Main {
                 array[i] *= 2;
             }
         }
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 
     // Задание 13
@@ -111,6 +123,12 @@ public class Main {
         int[][] matrix = new int[size][size];
         for (int i = 0; i < size; i++) {
             matrix[i][i] = 1;
+        }
+        for (int[] row : matrix) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
         }
         return matrix;
     }
@@ -121,6 +139,10 @@ public class Main {
         for (int i = 0; i < len; i++) {
             array[i] = initialValue;
         }
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
         return array;
     }
 
@@ -140,7 +162,8 @@ public class Main {
         invertArray(array);
 
         int[] filledArray = fillArray();
-        int[] customArray = createArray(5, 42);
-        int[][] diagonalMatrix = fillDiagonal(5);
+        multiplyIfLessThanSix(new int[]{1, 5, 3, 2, 1, 4, 5, 2, 4, 8, 9, 1});
+        fillDiagonal(5);
+        createArray(5, 42);
     }
 }
